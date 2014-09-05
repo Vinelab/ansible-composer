@@ -7,7 +7,7 @@
   tags: [configuration, composer, composer-install]
 
 - name: rename - composer.phar -> composer
-  shell: "mv {{ composer_install_dir }}/composer.phar {{ composer_install_dir }}/composer"
+  command: "mv {{ composer_install_dir }}/composer.phar {{ composer_install_dir }}/composer"
   args:
     creates: "{{ composer_install_dir }}/composer"
   tags: [configuration, composer, composer-move]
