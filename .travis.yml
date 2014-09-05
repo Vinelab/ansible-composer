@@ -5,6 +5,9 @@ python: "2.7"
 before_install:
   - sudo apt-get update -qq
 
+  # Install php and curl
+  - sudo apt-get install php5 php5-cli curl
+
 install:
   # Install Ansible.
   - pip install ansible
