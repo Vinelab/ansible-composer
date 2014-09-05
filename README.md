@@ -1,8 +1,37 @@
-# Ansible Composer
-Install PHP Composer on Centos/Red Hat with Ansible.
+## composer [![Build Status](https://travis-ci.org/Oefenweb/ansible-composer.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-composer)
 
-## Installation
-Clone this repository inside your ```roles``` directory.
+Set up composer.
 
-## Usage
-installs ```composer.phar``` as ```composer``` in ```/usr/local/bin``` and makes it executable so that you can use it directly as ```/usr/local/bin/composer install```
+#### Requirements
+
+* `curl`
+* `php` (5.3.2+)
+
+#### Variables
+
+* `composer_install_dir` [default: `/usr/local/bin`]: Install directory
+
+## Dependencies
+
+None
+
+#### Example
+
+```yaml
+---
+- hosts: all
+  roles:
+  - composer
+```
+
+#### License
+
+MIT
+
+#### Author Information
+
+Mischa ter Smitten (based on work of Vinelab)
+
+#### Feedback, bug-reports, requests, ...
+
+Are [welcome](https://github.com/Oefenweb/ansible-composer/issues)!
